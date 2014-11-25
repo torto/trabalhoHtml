@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -10,6 +11,7 @@
         <link href="css/bootstrap.css" rel="stylesheet" />
         <link href="css/bootstrap.min.css" rel="stylesheet" />
         <link href="css/style.css" rel="stylesheet" />
+        <link href="css/style-form.css" rel="stylesheet" />
     </head>
     <body>
         <header>
@@ -67,34 +69,121 @@
                 </div>
             </div>
         </header>  
-        <section id="cadastro-usuario" class="col-md-6">
-            <form class="form-horizontal">
+
+        <section id="cadastro-usuario" class="col-md-8">
+            <form class="form-horizontal" action="" method="post">
                 <fieldset>
-                    <legend>Dados Cadatrais</legend>
+                    <legend>Dados Cadastrais</legend>
                     <div class="form-group">
-                        <label for="inputEmail" class="col-lg-2 control-label">Nome</label>
-                        <div class="col-lg-10">
-                            <input class="form-control" id="inputEmail" placeholder="Insira seu nome completo" type="text">
+                        <label for="input-nome" class="col-lg-1 control-label">Nome:</label>
+                        <div class="col-lg-6">
+                            <input class="form-control" id="input-nome" name="input-nome" type="text">
                         </div>
                     </div>
-                    
+
                     <div class="form-group">
-                        <label class="col-lg-2 control-label">Sexo</label>
-                        <div class="col-lg-10">
-                            <div class="radio">
+                        <label for="input-cpf" class="col-lg-1 control-label">CPF:</label>
+                        <div class="col-lg-6">
+                            <input class="form-control" id="input-cpf" name="input-cpf" type="text">
+                        </div>                        
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-lg-1 control-label">Sexo:</label>
+                        <div class="col-lg-4">
+                            <div class="radio-sexo">
                                 <label>
-                                    <input name="optionsRadios" id="masculino" value="masculino" checked="" type="radio">
+                                    <input name="radio" id="masculino" value="masculino" type="radio">
                                     Masculino
                                 </label>
                             </div>
-                            <div class="radio">
+                            <div class="radio-sexo">
                                 <label>
-                                    <input name="optionsRadios" id="feminino" value="feminino" type="radio">
+                                    <input name="radio" id="feminino" value="feminino" type="radio">
                                     Feminino
                                 </label>
                             </div>
                         </div>
+                    </div>                  
+
+                    <div class="form-group">
+                        <label class="col-lg-1 control-label">Nascimento:</label>
+                        <div class="col-md-1">
+                            <select class="form-control" id="dia" name="dia">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>  
+                        </div>
+                        <div class="col-md-3">
+                            <select class="form-control" id="mes" name="mes">
+                                <option>Janeiro</option>
+                                <option>Fevereiro</option>
+                                <option>Março</option>
+                                <option>Abril</option>
+                                <option>Maio</option>
+                            </select> 
+                        </div>
+                        <div class="col-md-2">
+                            <select class="form-control" id="ano" name="ano">
+                                <option>1990</option>
+                                <option>1991</option>
+                                <option>1992</option>
+                                <option>1993</option>
+                                <option>1994</option>
+                            </select> 
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="input-email" class="col-lg-1 control-label">E-mail:</label>
+                        <div class="col-lg-6">
+                            <input class="form-control" id="input-email" name="input-email" type="email">
+                        </div>
+                        <label for="input-telefone" class="col-lg-1 control-label">Telefone:</label>
+                        <div class="col-lg-4">
+                            <input class="form-control" id="input-telefone" name="input-telefone" type="tel">
+                        </div>
                     </div>                    
+
+                    <div class="form-group">
+                        <label for="input-endereco" class="col-lg-1 control-label">Endereço:</label>
+                        <div class="col-lg-6">
+                            <input class="form-control" id="input-endereco" name="input-endereco" type="text">
+                        </div>
+                        <label for="input-numero" class="col-lg-1 control-label">Número:</label>
+                        <div class="col-lg-1">
+                            <input class="form-control" id="input-numero" name="input-numero" type="text">
+                        </div>
+                    </div>                                     
+
+                    <div class="form-group">
+                        <label for="input-bairro" class="col-lg-1 control-label">Bairro:</label>
+                        <div class="col-md-3">
+                            <input class="form-control" id="input-bairro" name="input-bairro" type="text">
+                        </div>
+                        <label for="input-cidade" class="col-lg-1 control-label">Cidade:</label>
+                        <div class="col-md-3">
+                            <input class="form-control" id="input-cidade" name="input-cidade" type="text">
+                        </div>                        
+                        <div class="col-md-2">
+                            <select class="form-control" id="uf">
+                                <option>PR</option>
+                                <option>SC</option>
+                                <option>RS</option>                                
+                            </select>  
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-lg-10 col-lg-offset-2">
+                            <button class="btn btn-default">Cancelar</button>
+                            <button type="submit" class="btn btn-primary">Registrar</button>
+                        </div>
+                    </div>  
+
                 </fieldset>
             </form>
         </section>
