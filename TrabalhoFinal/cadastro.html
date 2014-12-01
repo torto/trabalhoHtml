@@ -12,6 +12,28 @@
         <link href="css/bootstrap.min.css" rel="stylesheet" />
         <link href="css/style.css" rel="stylesheet" />
         <link href="css/style-form.css" rel="stylesheet" />
+        <script type="text/javascript" src="js/jquery.validate.js"></script>
+        <script type="text/javascript">
+            $(function() {
+                $(".form-horizontal").validate({
+                rules:{
+                    //Atributo name
+                    nome:{required:true},
+                    cpf:{required:true},
+                    email:{required:true, email:true},
+                    telefone:{required:true},
+                    endereco:{required:true},
+                    numero:{required:true},
+                    bairro:{required:true}
+                    cidade{required:true}
+                    uf{required:true}
+                },
+                messages:{
+                     nome:{required:"Informe um valor no campo Nome!"},
+                     email:{required:"Informe um valor no campo Email!", email:"Digite um e-mail válido!"},
+                }
+            })});
+        </script>
     </head>
     <body>
         <header>
@@ -77,14 +99,14 @@
                     <div class="form-group">
                         <label for="input-nome" class="col-lg-1 control-label">Nome:</label>
                         <div class="col-lg-6">
-                            <input class="form-control" id="input-nome" name="input-nome" type="text">
+                            <input class="form-control" id="input-nome" name="nome" type="text">
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label for="input-cpf" class="col-lg-1 control-label">CPF:</label>
                         <div class="col-lg-6">
-                            <input class="form-control" id="input-cpf" name="input-cpf" type="text">
+                            <input class="form-control" id="input-cpf" name="cpf" type="text">
                         </div>                        
                     </div>
 
@@ -93,13 +115,13 @@
                         <div class="col-lg-4">
                             <div class="radio-sexo">
                                 <label>
-                                    <input name="radio" id="masculino" value="masculino" type="radio">
+                                    <input name="masculino" id="radio-masculino" value="masculino" type="radio">
                                     Masculino
                                 </label>
                             </div>
                             <div class="radio-sexo">
                                 <label>
-                                    <input name="radio" id="feminino" value="feminino" type="radio">
+                                    <input name="feminino" id="radio-feminino" value="feminino" type="radio">
                                     Feminino
                                 </label>
                             </div>
@@ -109,7 +131,7 @@
                     <div class="form-group">
                         <label class="col-lg-1 control-label">Nascimento:</label>
                         <div class="col-md-2">
-                            <select class="form-control" id="dia" name="dia">
+                            <select class="form-control" id="select-dia" name="dia">
                                 <option>1</option>
                                 <option>2</option>
                                 <option>3</option>
@@ -118,7 +140,7 @@
                             </select>  
                         </div>
                         <div class="col-md-2">
-                            <select class="form-control" id="mes" name="mes">
+                            <select class="form-control" id="select-mes" name="mes">
                                 <option>Jan</option>
                                 <option>Fev</option>
                                 <option>Mar</option>
@@ -127,7 +149,7 @@
                             </select> 
                         </div>
                         <div class="col-md-2">
-                            <select class="form-control" id="ano" name="ano">
+                            <select class="form-control" id="select-ano" name="ano">
                                 <option>1990</option>
                                 <option>1991</option>
                                 <option>1992</option>
@@ -140,36 +162,36 @@
                     <div class="form-group">
                         <label for="input-email" class="col-lg-1 control-label">E-mail:</label>
                         <div class="col-lg-4">
-                            <input class="form-control" id="input-email" name="input-email" type="email">
+                            <input class="form-control" id="input-email" name="email" type="email">
                         </div>
                         <label for="input-telefone" class="col-lg-1 control-label">Telefone:</label>
                         <div class="col-lg-6">
-                            <input class="form-control" id="input-telefone" name="input-telefone" type="tel">
+                            <input class="form-control" id="input-telefone" name="telefone" type="tel">
                         </div>
                     </div>                    
 
                     <div class="form-group">
                         <label for="input-endereco" class="col-lg-1 control-label">Endereço:</label>
                         <div class="col-lg-4">
-                            <input class="form-control" id="input-endereco" name="input-endereco" type="text">
+                            <input class="form-control" id="input-endereco" name="endereco" type="text">
                         </div>
                         <label for="input-numero" class="col-lg-1 control-label">Número:</label>
                         <div class="col-lg-2">
-                            <input class="form-control" id="input-numero" name="input-numero" type="text">
+                            <input class="form-control" id="input-numero" name="numero" type="text">
                         </div>
                         <label for="input-bairro" class="col-lg-1 control-label">Bairro:</label>
                         <div class="col-md-3">
-                            <input class="form-control" id="input-bairro" name="input-bairro" type="text">
+                            <input class="form-control" id="input-bairro" name="bairro" type="text">
                         </div>
                     </div>                                     
 
                     <div class="form-group">                        
                         <label for="input-cidade" class="col-lg-1 control-label">Cidade:</label>
                         <div class="col-md-3">
-                            <input class="form-control" id="input-cidade" name="input-cidade" type="text">
+                            <input class="form-control" id="input-cidade" name="cidade" type="text">
                         </div>                        
                         <div class="col-md-2">
-                            <select class="form-control" id="uf">
+                            <select class="form-control" id="select-uf" name="uf">
                                 <option>PR</option>
                                 <option>SC</option>
                                 <option>RS</option>                                
