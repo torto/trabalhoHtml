@@ -55,6 +55,7 @@ function carregarJS(variavel) {
     $.get("js/"+variavel.url + ".js").done(function(data) {
         //.done executa apos terminado toda a transferencia do arquivo
         // eh um metodo asincrono
+
         var corpo = variavel.corpo;
         scriptTag = document.createElement('script');
         scriptTag.innerHTML = data;
