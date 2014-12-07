@@ -1,32 +1,82 @@
-<html>
-    <head>
-        <title>Produto</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="http://localhost:35729/livereload.js"></script>
-        <script src="js/jquery-1.10.2.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/bootswatch.js"></script>
-        <link href="css/bootstrap.css" rel="stylesheet" />
-        <link href="css/bootstrap.min.css" rel="stylesheet" />
-        <link href="css/style.css" rel="stylesheet" />
-        <link href="css/style-form.css" rel="stylesheet" />
-    </head>
-    <body>
-        <div>
-            <div class="col-md-4 col-md-offset-4">
-                <div class="thumbnail">
-                        <img data-src="holder.js/300x300" src="img/1.jpg" alt="...">
-                        <div class="caption">
-                                <h3>Lorem ipsum</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit.</p>
-                                <p>Valor: R$ 80,00</p>                                
-                                <p>                                    
-                                    <a href="#" class="btn btn-default btn-lg btn-block">Comprar</a>
-                                </p>
+<div class="row">
+    <div class="col-md-6">
+        <div class="thumbnail">
+            <img data-src="holder.js/300x300" src="img/1.jpg" alt="...">                        
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">                                
+                            <h4 class="modal-title">Yoyo Duncan</h4>
                         </div>
+
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit.</p>
+                                </div>                        
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h5>Valor: R$ 80,00</h5>
+                                </div>
+                                
+                                <div class="col-md-3">
+                                    <h5>Pagamento:</h5>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <select class="form-control" id="select-pgto" name="pgto">
+                                        <option>Boleto</option>
+                                        <option>Depósito</option>
+                                        <option>Cartão</option>  
+                                    </select> 
+                                </div>                               
+                            </div>                                                               
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" data-pagina="principal" class="btn btn-default" data-dismiss="modal">
+                                Cancelar</button>
+                            <button type="button" data-pagina="principal" class="btn btn-primary">
+                                Comprar</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </body>
-</html>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+        <section class="thumbnail">
+            <header class="row">
+                <h3 class="text-center">Yoyo Duncan</h3>
+            </header>
+            <body class="row">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h6 class="text-center">Informações Técnicas:</h6>
+                        <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h6 class="text-center">Observações:</h6>
+                        <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h6 class="text-center">Fabricante:</h6>
+                        <p class="text-center">Lorem ipsum dolor sit amet.</p>
+                    </div>
+                </div>
+            </body>
+        </section>                
+    </div>
+</div>
