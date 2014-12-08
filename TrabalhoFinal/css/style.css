@@ -1,3 +1,8 @@
+.full{
+	margin: 0 auto;
+  max-width: 100%;
+}
+
 .navbar-right li p {
 	margin-top: 20px;
 }
@@ -8,7 +13,7 @@
 	z-index: 10000;
 }
 .principais-produtos {
-	height: auto;
+
 }
 #topo-info {
 	width: 100%;
@@ -36,7 +41,7 @@
 	margin-bottom: 20px;
 }
 footer {
-	background: none repeat scroll 0% 0% rgba(194, 194, 194, 1);
+	background: none repeat scroll 0% 0% rgba(239, 239, 239, 1);
 	color: white;
 	position: relative;
 	width: 100%;
@@ -50,6 +55,34 @@ footer {
 	margin:0;
 	padding: 0;
 }
-#footer{
-	clear: both;
+
+.clear{
+	clear: both;	
+}
+
+footer nav{
+	color: #00ADEF;
+line-height: 1.55;
+list-style: disc outside none;
+}
+
+.texto{
+	color: #666;
+}
+
+.texto-titulo{
+	color: #2F2F2F;
+}
+
+.linha-footer{
+	padding-bottom: 25px;
+	border-bottom: 1px solid #00ADEF;
+}
+
+.modal-content{
+	height: 308px;
+}
+
+.modal-dialog{
+	margin: 0px;
 }

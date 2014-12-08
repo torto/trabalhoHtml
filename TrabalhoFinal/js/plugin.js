@@ -2,14 +2,15 @@ $(document).ready(function() {
     var body = document.getElementById('pagina-dinamica');
     var trocaPaginaVar = {
         corpo: body
-    }
-    ;
+    };
+
     telaInicial(trocaPaginaVar);
     //metodo do callback
     trocaPaginaVar.sucess = function() {
         //drop menu
         $('.dropdown-menu li a ').on('click', function() {
             trocaPaginaVar.url = this.dataset.pagina;
+            trocaPaginaVar.sucess = undefined;
             trocarPagina(trocaPaginaVar);
 
             trocaPaginaVar.url = "jquery.validate";
@@ -21,12 +22,14 @@ $(document).ready(function() {
         );
         //botoes de lista de produtos tela inicial
         $('.caption p a ').on('click', function() {
+            trocaPaginaVar.sucess = undefined;
             trocaPaginaVar.url = this.dataset.pagina;
             trocarPagina(trocaPaginaVar);
         }
         );
         // logo tela inicial
         $('.navbar-brand').on('click', function() {
+            trocaPaginaVar.sucess = undefined;
             telaInicial(trocaPaginaVar);
         }
         );
